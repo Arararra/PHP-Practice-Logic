@@ -6,5 +6,4 @@
       echo $key*=$angka;
  	  echo "<br>";
     }
-  echo "<br>";
 ?>

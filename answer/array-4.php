@@ -12,5 +12,5 @@
   	}
   }
   echo "Index ke-$res <br>";
-  echo "Id=".$input[$res]['id'].", Nama=".$input[$res]['nama'];
+  echo "Id= ".$input[$res]['id'].", Nama= ".$input[$res]['nama'];
 ?>
