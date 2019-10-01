@@ -1,23 +1,21 @@
 <?php
-  $input = 5;
-
-  echo "Segitiga A: <br>";
+  function segitigaA($input){
     for($i=0; $i<=$input; $i++){
     for($j=1; $j<=$i; $j++){
-	    echo "* ";
+      echo "* ";
     }
-	    echo "<br>";
-    }  
-
-  echo "Segitiga B: <br>";
+      echo "<br>";
+    }
+  }
+  function segitigaB($input){
     for($i=0; $i<=$input; $i++){
     for($j=$input-$i; $j>=1; $j--){
       echo "* ";
     }
       echo "<br>";
     }
-
-  echo "Segitiga C: <br>";
+  }
+  function segitigaC($input){
     for($i=$input; $i>0; $i--){
     for ($k=0; $k<$i; $k++) { 
       echo "&nbsp&nbsp&nbsp";
@@ -27,8 +25,8 @@
     }
       echo "<br>";
     }
-    
-  echo "Segitiga D: <br>";
+  }
+  function segitigaD($input){
     for( $i=1; $i<=$input; $i++){
     for($k=1; $k<=$i; $k++){
       echo "&nbsp&nbsp&nbsp";
@@ -38,4 +36,14 @@
     }
       echo "<br> ";
     }
+  }
+
+  echo "segitiga A: <br>";
+  echo segitigaA(5);
+  echo "segitiga B: <br>";
+  echo segitigaB(5);
+  echo "segitiga C: <br>";
+  echo segitigaC(5);
+  echo "segitiga D: <br>";
+  echo segitigaD(5);
 ?>

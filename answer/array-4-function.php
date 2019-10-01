@@ -6,12 +6,13 @@
   ];
 
   function cariId($arr, $cariId){
+    $res = -1;
     foreach ($arr as $key => $value){
       if ($value['id'] == $cariId){
         $res = $key;
-        return $res;
       }
     }
+    return $res;
   }
 
   $res = cariId($input, 122);

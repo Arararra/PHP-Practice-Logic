@@ -5,16 +5,17 @@
     ['id' => 423, 'nama' => 'Fakhri'],
   ];
 
-  function cariId($arr, $carId, $carVal){
+  function cariVal($arr, $carId, $carVal){
+    $res = -1;
     foreach ($arr as $key => $value){
       if ($value[$carId] == $carVal){
         $res = $key;
-        return $res;
       }
     }
+    return $res;
   }
 
-  $res = cariId($input, 'id', 423);
+  $res = cariVal($input, 'id', 423);
   echo "Index ke-".$res."<br>";
   echo "Id= ".$input[$res]['id'].", Nama= ".$input[$res]['nama'];
 ?>
