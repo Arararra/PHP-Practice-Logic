@@ -1,5 +1,5 @@
 <?php
-  $input = [3, 5, 7, 9, ];
+  $input = [3, 5, 7, 9, 6];
 
   function cariIndex($input, $cariValue){
     $res = -1;
@@ -11,5 +11,5 @@
     return $res;
   }
     
-  echo cariIndex($input, 7);
+  echo "Index ke ".cariIndex($input, 9);
 ?>

@@ -5,17 +5,23 @@
     ['id' => 423, 'nama' => 'Fakhri'],
   ];
 
-  function cariId($arr, $cariId){
-    $res = -1;
+  function cariId($arr, $carId){
+    $res = "Data tidak ada.";
     foreach ($arr as $key => $value){
-      if ($value['id'] == $cariId){
+      if ($value['id'] == $carId){
         $res = $key;
+        echo "Index ke ".$res."<br>";
+        echo "Id = ".$value['id']."<br>";
+        echo "Nama = ".$value['nama']."<br>";
       }
     }
-    return $res;
+    if ($res != null){
+      if ($res > 0) {
+        $res = "";
+      }
+      echo $res;
+    }
   }
 
-  $res = cariId($input, 122);
-  echo "Index ke-".$res."<br>";
-  echo "Id= ".$input[$res]['id'].", Nama= ".$input[$res]['nama'];
+  cariId($input, 122);
 ?>

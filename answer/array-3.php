@@ -8,5 +8,5 @@
       $res = $key;
     }
   }
-  echo "index ke-".$res;
+  echo "index ke ".$res;
 ?>

@@ -3,10 +3,10 @@
 
   function arraykali($arr, $angka){
     foreach ($arr as $key) {
-      echo $key*=$angka;
+      echo $key*$angka;
       echo "<br>";
     }
   }
 
-  echo arraykali($input, 3);
+  arraykali($input, 3);
 ?>

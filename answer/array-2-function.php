@@ -8,5 +8,5 @@
 	}
   }
 
-  echo balikarray($input);
+  balikarray($input);
 ?>

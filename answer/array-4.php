@@ -1,8 +1,8 @@
 <?php
   $input = [
-    ['id' => 122, 'nama' => 'rama'],
-    ['id' => 287, 'nama' => 'renaldy'],
-    ['id' => 423, 'nama' => 'fakhri'],
+    ['id' => 122, 'nama' => 'Rama'],
+    ['id' => 287, 'nama' => 'Renaldy'],
+    ['id' => 423, 'nama' => 'Fakhri'],
   ];
   $cari = '122';
 
@@ -11,6 +11,7 @@
   		$res = $key;
   	}
   }
+  
   echo "Index ke-$res <br>";
   echo "Id= ".$input[$res]['id'].", Nama= ".$input[$res]['nama'];
 ?>

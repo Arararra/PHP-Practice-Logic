@@ -39,11 +39,11 @@
   }
 
   echo "segitiga A: <br>";
-  echo segitigaA(5);
+  segitigaA(5);
   echo "segitiga B: <br>";
-  echo segitigaB(5);
+  segitigaB(5);
   echo "segitiga C: <br>";
-  echo segitigaC(5);
+  segitigaC(5);
   echo "segitiga D: <br>";
-  echo segitigaD(5);
+  segitigaD(5);
 ?>

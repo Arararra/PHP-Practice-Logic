@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>array-request-1</title>
+  <style type="text/css">
+    *{
+      font-family: calibri;
+    }
+    table{
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th{
+      background: #36c9a5;
+    }
+    tr:nth-child(odd){
+      height: 30px;
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even){
+      height: 30px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
 <?php
   $input = [
     ['id' => 122, 'nama' => 'Rama', 'asal' => 'Surabaya'],
@@ -8,7 +34,7 @@
   if (isset($_GET['id'])){
     $id = $_GET['id'];
   }else{
-  	$id = "";
+    $id = "";
   }
 
   foreach ($input as $key => $value){
@@ -18,12 +44,14 @@
   }
 
   if (isset($res)):
-  	echo "Profil siswa id: ".$input[$res]['id']."<br>";
-  	echo "- Id: ".$input[$res]['id']."<br>";
-  	echo "- Nama: ".$input[$res]['nama']."<br>";
-  	echo "- Asal: ".$input[$res]['asal']."<br>";
 ?>
 
+<p><?php echo "Menampilkan profil siswa id: ".$input[$res]['id'] ?></p>
+<p>
+  - ID: <?php echo $input[$res]['id'] ?><br>
+  - Nama: <?php echo $input[$res]['nama'] ?><br>
+  - Asal: <?php echo $input[$res]['asal'] ?><br>
+</p>
 <button onclick="window.history.back()">Kembali</button>
 
 <?php
@@ -32,10 +60,10 @@
 
 <table border="1" cellspacing="0">
   <tr>
-    <td>Id</td>
-    <td>Nama</td>
-    <td>Asal</td>
-    <td>Link</td>
+    <th>Id</th>
+    <th>Nama</th>
+    <th>Asal</th>
+    <th>Link</th>
   </tr>
   <?php foreach ($input as $key => $value): ?>
   <tr>
@@ -48,3 +76,5 @@
 </table>
 
 <?php endif; ?>
+</body>
+</html>
