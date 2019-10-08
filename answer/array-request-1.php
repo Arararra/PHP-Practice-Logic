@@ -31,19 +31,13 @@
     ['id' => 423, 'nama' => 'Fakhri', 'asal' => 'Surabaya'],
   ];
 
-  if (isset($_GET['id'])){
-    $id = $_GET['id'];
-  }else{
-    $id = "";
-  }
-
+  if (isset($_GET['id'])):
+  $id = $_GET['id'];
   foreach ($input as $key => $value){
     if ($value['id'] == $id){
       $res = $key;
     }
   }
-
-  if (isset($res)):
 ?>
 
 <p><?php echo "Menampilkan profil siswa id: ".$input[$res]['id'] ?></p>
