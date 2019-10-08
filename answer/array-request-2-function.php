@@ -31,38 +31,28 @@
 </head>
 <body>
 <?php
+  include 'function.php';
+
   $input = [
     ['id' => 122, 'nama' => 'Rama', 'asal' => 'Surabaya'],
     ['id' => 227, 'nama' => 'Renaldy', 'asal' => 'Surabaya'],
     ['id' => 423, 'nama' => 'Fakhri', 'asal' => 'Surabaya'],
   ];
-  $resultArray = [];
-
+       
   if (isset($_GET['cari'])){
     if ($_GET['cari'] != ""){
-      // jika ada cari memiliki parameter
       $cari = $_GET['cari'];
-      foreach ($input as $key => $value){
-        if (strpos($value['id'], $cari) !== false){
-          array_push($resultArray, $value);
-        }
-      }
+      $resultArray = findContains($input, 'id', $cari);
     }else{
-      // jika ada cari
       $resultArray = $input;
     }
   }else{
-    // jika tidak ada parameter cari
     $resultArray = $input;
   }
 
   if (isset($_GET['id'])):
   $id = $_GET['id'];
-  foreach ($input as $key => $value){
-    if ($value['id'] == $id){
-      $res = $key;
-    }
-  }
+  $res = findSame($input, 'id', $id);
 ?>
 
 <p><?php echo "Menampilkan profil siswa id: ".$input[$res]['id'] ?></p>
@@ -101,3 +91,5 @@
 </table>
 
 <?php endif; ?>
+</body>
+</html>
